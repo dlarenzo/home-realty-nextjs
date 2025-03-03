@@ -11,8 +11,8 @@
   "dependencies": {
     "@clerk/nextjs": "^6.10.4",
     "firebase": "^11.0.2",
-    "mongodb": "^6.11.0",
-    "mongoose": "^8.8.4",
+    "mongodb": "^6.14.1",
+    "mongoose": "^8.12.0",
     "next": "^15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
