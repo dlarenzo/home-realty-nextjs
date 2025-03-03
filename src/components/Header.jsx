@@ -5,27 +5,29 @@ import Link from "next/link";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 import { useEffect, useState } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
+
 export default function Header() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const [searchTerm, setSearchTerm] = useState("");
+  // const searchParams = useSearchParams();
+  // const router = useRouter();
+  // const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
-    const urlParams = new URLSearchParams(searchParams);
-    const searchTermFromUrl = urlParams.get("searchTerm");
-    if (searchTermFromUrl) {
-      setSearchTerm(searchTermFromUrl);
-    }
-  }, [searchParams]);
+  // useEffect(() => {
+  //   const urlParams = new URLSearchParams(searchParams);
+  //   const searchTermFromUrl = urlParams.get("searchTerm");
+  //   if (searchTermFromUrl) {
+  //     setSearchTerm(searchTermFromUrl);
+  //   }
+  // }, [searchParams]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const urlParams = new URLSearchParams(searchParams);
-    urlParams.set("searchTerm", searchTerm);
-    const searchQuery = urlParams.toString();
-    router.push(`/search?${searchQuery}`);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const urlParams = new URLSearchParams(searchParams);
+  //   urlParams.set("searchTerm", searchTerm);
+  //   const searchQuery = urlParams.toString();
+  //   router.push(`/search?${searchQuery}`);
+  // };
 
   return (
     <header className="bg-slate-200 shadow-md">
@@ -37,7 +39,7 @@ export default function Header() {
           </h1>
         </Link>
         {/* SEARCH BUTTON */}
-        <form
+        {/* <form
           className="bg-slate-100 p-3 rounded-lg flex items-center"
           onSubmit={handleSubmit}
         >
@@ -51,7 +53,7 @@ export default function Header() {
           <button>
             <FaSearch className="text-slate-600" />
           </button>
-        </form>
+        </form> */}
         <ul className="flex gap-4">
           <Link href="/">
             <li className="hidden md:inline text-slate-700 hover:underline">
