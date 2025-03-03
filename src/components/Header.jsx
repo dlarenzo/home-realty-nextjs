@@ -37,11 +37,10 @@ export default function Header() {
           </h1>
         </Link>
         {/* SEARCH BUTTON */}
-        {/* <form
+        <form
           className="bg-slate-100 p-3 rounded-lg flex items-center"
           onSubmit={handleSubmit}
         >
-          
           <input
             type="text"
             placeholder="Search..."
@@ -52,7 +51,7 @@ export default function Header() {
           <button>
             <FaSearch className="text-slate-600" />
           </button>
-        </form> */}
+        </form>
         <ul className="flex gap-4">
           <Link href="/">
             <li className="hidden md:inline text-slate-700 hover:underline">
